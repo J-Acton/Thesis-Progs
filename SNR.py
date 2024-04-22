@@ -141,14 +141,6 @@ prepro_mSNR_avg = np.average(prepro_mSNR)
 prepro_eSNR_avg = np.average(prepro_eSNR)
 #-----------------------------------------------------------------------------#
 
-Tstart_dir = 'F:/FYP Stuff/SCJA WASP33b/N1/T-start/T-start_finals/'
-startpics = (glob.glob(Tstart_dir+'/*.FITS'))
-
-test_st_SNR = []
-for i in range(len(startpics)):
-    med_bkg = np.median(fits.getdata(startpics[i]))
-    test_st_SNR.append(st_flux[i]/med_bkg)
-
 
 print('\n')
 print('SNR at the start of the transit (post-processing): ', st_SNR_avg)
